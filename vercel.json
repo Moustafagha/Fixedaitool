@@ -24,6 +24,8 @@
       "use": "@vercel/static"
     }
   ],
+} 
   "installCommand": "echo No install command needed for static build",
   "buildCommand": "echo No build command needed for static build"
 }
+
