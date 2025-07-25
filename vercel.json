@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/static/index.html"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "$PYTHONPATH:/var/task/src"
+  },
+  "builds": [
+    {
+      "src": "src/static/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "installCommand": "echo No install command needed for static build",
+  "buildCommand": "echo No build command needed for static build"
+}
